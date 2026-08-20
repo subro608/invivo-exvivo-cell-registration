@@ -1,3 +1,16 @@
 {
-  "rewrites": [{ "source": "/", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/multimodel", "destination": "/multimodel.html" },
+    { "source": "/zquery", "destination": "/zquery.html" },
+    { "source": "/marco", "destination": "/marco.html" },
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
 }

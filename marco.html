@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MARCO cell matching · honest regview</title>
+  <style>
+    :root {
+      --bg: #0b0e11;
+      --panel: #141a20;
+      --border: #232c35;
+      --ink: #e8edf1;
+      --muted: #8794a1;
+      --accent: #4bc4d6;
+      --accent2: #c084fc;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      font-weight: 650;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      margin-right: 6px;
+    }
+    .tag.a { color: var(--accent); border-color: #4bc4d655; }
+    .tag.b { color: var(--accent2); border-color: #c084fc55; }
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .back:hover { color: var(--accent); }
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">← 4-modality 3D viewer</a>
+    <h1>MARCO cell matching</h1>
+    <p class="sub">Honest LOSO regview dashboards · NYU HPC · Aug 2026</p>
+
+    <div class="grid">
+      <a class="card" href="/multimodel.html">
+        <h2>Multi-model honest GT modes</h2>
+        <p>
+          All MARCO arms (AUG-v1, SoftZ, chattn+bbFT, AUG-v2, …) across six subjects.
+          Model A / Model B compare with med px + Snap R@1 bars.
+        </p>
+        <span class="tag a">6 mice</span>
+        <span class="tag">Model A / B</span>
+        <span class="tag">~186 MB</span>
+      </a>
+
+      <a class="card" href="/zquery.html">
+        <h2>Z-query gate compare</h2>
+        <p>
+          jy306 + jy316 gate folds only. Model A fixed to full champion;
+          compare completed Z-query arms (frozen champ, pretrained DINOv2, σ variants).
+        </p>
+        <span class="tag b">gate folds</span>
+        <span class="tag">Champion vs Z-query</span>
+        <span class="tag">~33 MB</span>
+      </a>
+    </div>
+
+    <footer>
+      Static export from MARCO <code>results/clicks_to_parity_honest/</code>
+    </footer>
+  </div>
+</body>
+</html>

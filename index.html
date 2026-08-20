@@ -17,8 +17,11 @@ iframe.hidden{visibility:hidden;pointer-events:none}
 #loading{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:101;color:#888;font:11px/1 'SF Mono',monospace;display:none}
 .loader{display:inline-block;width:8px;height:8px;border:2px solid #555;border-top-color:#88f;border-radius:50%;animation:spin 0.6s linear infinite;vertical-align:middle;margin-left:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
+#marcoLink{position:fixed;top:8px;right:12px;z-index:102;color:#666;font:11px/1 'SF Mono','Fira Code',monospace;text-decoration:none;letter-spacing:0.04em}
+#marcoLink:hover{color:#88f}
 </style>
 </head><body>
+<a id="marcoLink" href="/marco.html">MARCO dashboards →</a>
 <div id="toggle">
   <span class="label active" id="lblMod">MODALITY</span>
   <div class="switch" id="sw" onclick="toggle()"><div class="knob"></div></div>
